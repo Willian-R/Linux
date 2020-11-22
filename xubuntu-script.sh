@@ -15,7 +15,7 @@ echo
 echo "Removendo os programas desnecessários"
 echo "====================================="
 sleep 2
-sudo apt remove gnome-software-common xfburn onboard-common xfce4-notes xfce4-notes-plugin mousepad xfce4-screenshooter mate-calc-common atril-common libreoffice-common xfce4-dict simple-scan gimp gimp-data gimp-help-common pidgin pidgin-data pidgin-otr thunderbird thunderbird-locale-en thunderbird-locale-en-us thunderbird-locale-pt thunderbird-locale-pt-br sgt-launcher gnome-mines gnome-sudoku parole gigolo -y
+sudo apt remove xfce4-taskmanager gnome-software-common xfburn onboard-common xfce4-notes xfce4-notes-plugin mousepad xfce4-screenshooter mate-calc-common atril-common libreoffice-common xfce4-dict simple-scan gimp gimp-data gimp-help-common pidgin pidgin-data pidgin-otr thunderbird thunderbird-locale-en thunderbird-locale-en-us thunderbird-locale-pt thunderbird-locale-pt-br sgt-launcher gnome-mines gnome-sudoku parole gigolo -y
 echo
 
 # limpando os pacotes órfãos
@@ -26,7 +26,7 @@ sudo apt autoclean && sudo apt autoremove -y
 echo
 
 #instalando programas
-echo "Instalndo programas"
+echo "Instalando programas"
 echo "==================="
 sleep 2
 sudo apt install vlc htop git -y
