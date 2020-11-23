@@ -29,6 +29,6 @@ echo
 echo "Instalando programas"
 echo "==================="
 sleep 2
-sudo apt install vlc htop papirus-icon-theme -y
-echo
-echo "Finalizando o programa"
+sudo apt install vlc htop papirus-icon-theme neofetch -y
+clear
+neofetch
