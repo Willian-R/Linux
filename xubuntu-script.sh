@@ -29,17 +29,6 @@ echo
 echo "Instalando programas"
 echo "==================="
 sleep 2
-sudo apt install vlc htop git -y
-
-# instalando a fonte Flat-remix
-echo "Instalando o Flat-Remix"
-echo "======================="
-sleep 2
-mkdir projects
-cd projects/
-git clone https://github.com/daniruiz/flat-remix
-git clone https://github.com/daniruiz/flat-remix-gtk
-mkdir -p /home/teste/.icons && mkdir -p /home/teste/.themes
-cp -r flat-remix/Flat-Remix* /home/teste/.icons/ && cp -r flat-remix-gtk/Flat-Remix-GTK* /home/teste/.themes/
-gtk-update-icon-cache /home/teste/.icons/Flat-Remix-Blue-Dark/
+sudo apt install vlc htop papirus-icon-theme -y
+echo
 echo "Finalizando o programa"
