@@ -4,3 +4,4 @@ echo deb http://deb.debian.org/debian bullseye-updates main >> /etc/apt/sources.
 sudo apt update
 sudo apt full-upgrade -y
 sudo apt autoclean && sudo apt autoremove -y
+systemctl reboot
