@@ -14,7 +14,7 @@ read -p "Digite o nome do usuário: " usuario
 useradd -m -g users -G wheel -s /bin/bash ${usuario}
 read -p "Digite a senha para o usuário: " senhausuario
 echo "${usuario}:${senhausuario}" | chpasswd
-echo ${usuario} ALL=(ALL) ALL >> /etc/sudoers
+echo "${usuario} ALL=(ALL) ALL" >> /etc/sudoers
 pacman -S xorg xfce4 xfce4-goodies xdg-user-dirs gvfs lightdm lightdm-gtk-greeter firefox vlc gtkmm3 xf86-video-vmware xf86-input-vmmouse open-vm-tools papirus-icon-theme --noconfirm
 grub-install ${ESCOLHA}
 systemctl enable lightdm
