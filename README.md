@@ -1,2 +1,2 @@
-# Linux
+# Linux-Script
 shell script
