@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo pt_BR.UTF-8 UTF-8 >> /etc/locale.gen
 locale-gen
 echo LANG=pt_BR.UTF-8 >> /etc/locale.conf
@@ -11,7 +10,7 @@ echo ${nomemaquina} > /etc/hostname
 systemctl enable dhcpcd
 read -p "Digite a senha para o usuário root: " senharoot
 echo "root:${senharoot}" | chpasswd
-read -p "Digite o nome do usuário" usuario
+read -p "Digite o nome do usuário: " usuario
 useradd -m -g users -G wheel -s /bin/bash ${usuario}
 read -p "Digite a senha para o usuário: " senhausuario
 echo "${usuario}:${senhausuario}" | chpasswd
