@@ -3,6 +3,7 @@
 # Date: 11/27/2020            #
 # OS: Arch Linux              #
 ###############################
+echo
 echo pt_BR.UTF-8 UTF-8 >> /etc/locale.gen
 locale-gen
 echo LANG=pt_BR.UTF-8 >> /etc/locale.conf
