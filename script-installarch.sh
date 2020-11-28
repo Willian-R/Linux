@@ -5,6 +5,7 @@
 # OS: Arch Linux              #
 ###############################
 
+echo
 fdisk -l
 echo
 read -p "[+] Escolha o dispositivo da lista para instalar o sistema operacional: " ESCOLHA
