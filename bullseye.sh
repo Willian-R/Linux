@@ -1,4 +1,11 @@
 #!/bin/bash
+
+###############################
+# Author: Willian B. Ribeiro  #
+# Date: 11/22/2020            #
+# OS: GNU/Linux Debian        #
+###############################
+
 echo deb http://deb.debian.org/debian bullseye main > /etc/apt/sources.list
 echo deb http://deb.debian.org/debian bullseye-updates main >> /etc/apt/sources.list
 sudo apt update
