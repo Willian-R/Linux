@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Author: Willian B. Ribeiro  #
+# Date: 11/27/2020            #
+# OS: Arch Linux              #
+###############################
+
 fdisk -l
 echo
 read -p "[+] Escolha o dispositivo da lista para instalar o sistema operacional: " ESCOLHA
