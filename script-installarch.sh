@@ -1,5 +1,6 @@
 #!/bin/bash
 
+###############################
 # Author: Willian B. Ribeiro  #
 # Date: 11/27/2020            #
 # OS: Arch Linux              #
