@@ -29,6 +29,7 @@ echo "Resumo da criação e formatação do dispositivo escolhido"
 echo " -> BOOT (/BOOT): ${boot_part} com a formatação ${boot_type}"
 echo " -> RAÍZ DO SISTEMA (/): ${root_part} com formatação ${root_type}"
 echo " -> SWAP: ${swap_part}"
+sleep 10
 echo
 mkfs.${boot_type} ${boot_part}
 mkfs.${root_type} ${root_part}
