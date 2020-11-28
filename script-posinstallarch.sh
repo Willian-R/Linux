@@ -4,6 +4,7 @@
 # OS: Arch Linux              #
 ###############################
 echo
+read "Digite o dispositivo para instalação do GRUB: " ESCOLHA
 echo pt_BR.UTF-8 UTF-8 >> /etc/locale.gen
 locale-gen
 echo LANG=pt_BR.UTF-8 >> /etc/locale.conf
@@ -24,7 +25,6 @@ pacman -S xorg xfce4 xfce4-goodies xdg-user-dirs gvfs lightdm lightdm-gtk-greete
 pacman -Syu --noconfirm
 pacman -R xfburn xfce4-sensors-plugin xfce4-notes-plugin mousepad orage xfce4-taskmanager xfce4-clipman-plugin xfce4-screenshooter xfce4-dict parole --noconfirm
 pacman -Scc --noconfirm
-read "Digite o dispositivo para instalação do GRUB: " ESCOLHA
 grub-install ${ESCOLHA}
 systemctl enable lightdm
 systemctl enable vmtoolsd
