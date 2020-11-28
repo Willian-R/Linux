@@ -15,7 +15,7 @@ useradd -m -g users -G wheel -s /bin/bash ${usuario}
 read -p "Digite a senha para o usuário: " senhausuario
 echo "${usuario}:${senhausuario}" | chpasswd
 echo "${usuario} ALL=(ALL) ALL" >> /etc/sudoers
-pacman -S xorg xfce4 xfce4-goodies xdg-user-dirs gvfs lightdm lightdm-gtk-greeter firefox vlc gtkmm3 xf86-video-vmware xf86-input-vmmouse open-vm-tools papirus-icon-theme networkmanager network-manager-applet pulseaudio --noconfirm
+pacman -S xorg xfce4 xfce4-goodies xdg-user-dirs gvfs lightdm lightdm-gtk-greeter firefox vlc gtkmm3 xf86-video-vmware xf86-input-vmmouse open-vm-tools papirus-icon-theme networkmanager network-manager-applet pulseaudio bash-completion htop --noconfirm
 grub-install "${ESCOLHA}"
 systemctl enable lightdm
 systemctl enable vmtoolsd
