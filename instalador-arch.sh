@@ -42,25 +42,25 @@ read -p "Formato da partição: " ROOT_FORM
 # resumo da criação e do formato de cada partição no dispositivo escolhido
 clear
 tput bold; tput setaf 6; echo "Resumo da criação e formatação do dispositivo escolhido"; tput sgr0;
-echo " -----> BOOT (/BOOT): ${BOOT_PART} com a formatação ${BOOT_FORM}"
-echo " -----> RAÍZ DO SISTEMA (/): ${ROOT_PART} com formatação ${ROOT_FORM}"
+echo " -----> BOOT (/BOOT): ${DISP}${BOOT_PART} com a formatação ${BOOT_FORM}"
+echo " -----> RAÍZ DO SISTEMA (/): ${DISP}${ROOT_PART} com formatação ${ROOT_FORM}"
 if [ ${SE} = "s" ]; then
-	echo " -----> SWAP: ${swap_part}"
+	echo " -----> SWAP: ${DISP}${swap_part}"
 fi
 
 # Formata as partições escolhidas e ativa o swap
-mkfs.${BOOT_FORM} ${BOOT_PART}
-mkfs.${ROOT_FORM} ${ROOT_PART}
+mkfs.${BOOT_FORM} ${DISP}${BOOT_PART}
+mkfs.${ROOT_FORM} ${DISP}${ROOT_PART}
 if [ ${SE} = "s" ];then
 	read -p "Partição para swap: " SWAP_PART
-	mkswap ${SWAP_PART}
-	swapon ${SWAP_PART}
+	mkswap ${DISP}${SWAP_PART}
+	swapon ${DISP}${SWAP_PART}
 fi
 
 # montagem do sistema nas partições
-mount ${ROOT_PART} /mnt
+mount ${DISP}${ROOT_PART} /mnt
 mkdir /mnt/boot /mnt/home /mnt/var
-mount ${BOOT_PART} /mnt/boot
+mount ${DISP}${BOOT_PART} /mnt/boot
 echo
 
 # instalando a base do sistema com pacstrap
