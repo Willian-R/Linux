@@ -7,14 +7,10 @@
 # Description: simple installer - Arch Linux #
 ##############################################
 
-# variáveis globais
-
-
 # Banner
 tput bold; echo "============================";
 tput setaf 6; echo "   Instalador Arch Linux"; tput sgr0;
 tput bold; echo "============================"; tput sgr0;
-
 echo
 
 # Lista de todos os dispositivos na máquina e realiza a escolha do usuário
@@ -48,6 +44,7 @@ if [ ${SE} = "s" ]; then
 	echo " -----> SWAP: ${DISP}${swap_part}"
 fi
 tput sgr0;
+sleep 5
 echo
 
 # Formata as partições escolhidas e ativa o swap
