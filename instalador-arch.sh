@@ -42,11 +42,13 @@ read -p "Formato da partição: " ROOT_FORM
 # resumo da criação e do formato de cada partição no dispositivo escolhido
 clear
 tput bold; tput setaf 6; echo "Resumo da criação e formatação do dispositivo escolhido"; tput sgr0;
-echo " -----> BOOT (/BOOT): ${DISP}${BOOT_PART} com a formatação ${BOOT_FORM}"
+tput bold; tput setaf 7; echo " -----> BOOT (/BOOT): ${DISP}${BOOT_PART} com a formatação ${BOOT_FORM}"
 echo " -----> RAÍZ DO SISTEMA (/): ${DISP}${ROOT_PART} com formatação ${ROOT_FORM}"
 if [ ${SE} = "s" ]; then
 	echo " -----> SWAP: ${DISP}${swap_part}"
 fi
+tput sgr0;
+echo
 
 # Formata as partições escolhidas e ativa o swap
 mkfs.${BOOT_FORM} ${DISP}${BOOT_PART}
@@ -69,7 +71,7 @@ echo
 tput bold; echo "1) Stable - Kernel e módulos Vanilla Linux, com algus patches aplicados"
 echo "2) Hardened - Um kernel focado em segurança para mitigar explorações de kernel"
 echo "3) Longterm - Kernel e módulos Linux com suporte de longo prazo (LTS)"
-echo "4) Zen Kernel - Resultado de um esforço colaboratido de hackers do kernel para fornecer o melhor kernel Linux possível para os sistemas do dia a dia"
+echo "4) Zen Kernel - Resultado de um esforço colaborativo para fornecer o melhor kernel Linux possível para os sistemas do dia a dia"
 echo
 read -p "Escolha uma opção de kernel: " OPC
 case ${OPC} in
