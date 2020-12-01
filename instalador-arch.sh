@@ -7,6 +7,8 @@
 # Description: simple installer - Arch Linux #
 ##############################################
 
+clear
+
 # Banner
 tput bold; echo "============================";
 tput setaf 6; echo "   Instalador Arch Linux"; tput sgr0;
@@ -34,6 +36,9 @@ read -p "Partição para boot: " BOOT_PART
 read -p "Formato da partição: " BOOT_FORM
 read -p "Partição para raíz do sistema: " ROOT_PART
 read -p "Formato da partição: " ROOT_FORM
+if [ ${SE} = "s" ];then
+	read -p "Partição para swap: " SWAP_PART
+fi
 
 # resumo da criação e do formato de cada partição no dispositivo escolhido
 clear
@@ -51,7 +56,6 @@ echo
 mkfs.${BOOT_FORM} ${DISP}${BOOT_PART}
 mkfs.${ROOT_FORM} ${DISP}${ROOT_PART}
 if [ ${SE} = "s" ];then
-	read -p "Partição para swap: " SWAP_PART
 	mkswap ${DISP}${SWAP_PART}
 	swapon ${DISP}${SWAP_PART}
 fi
