@@ -46,7 +46,7 @@ tput bold; tput setaf 6; echo "Resumo da criação e formatação do dispositivo
 tput bold; tput setaf 7; echo " -----> BOOT (/BOOT): ${DISP}${BOOT_PART} com a formatação ${BOOT_FORM}"
 echo " -----> RAÍZ DO SISTEMA (/): ${DISP}${ROOT_PART} com formatação ${ROOT_FORM}"
 if [ ${SE} = "s" ]; then
-	echo " -----> SWAP: ${DISP}${swap_part}"
+	echo " -----> SWAP: ${DISP}${SWAP_PART}"
 fi
 tput sgr0;
 sleep 5
