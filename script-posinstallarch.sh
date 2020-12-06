@@ -44,13 +44,13 @@ echo "${usuario}:${senhausuario}" | chpasswd
 echo "${usuario} ALL=(ALL) ALL" >> /etc/sudoers
 
 # Instalação dos programas - Ambiente Gráfico: xfce | Diplay manager: lightdm | Gerenciar diretórios do usuário: xdg-user-dirs |
-pacman -S xorg xfce4 xfce4-goodies xdg-user-dirs gvfs lightdm lightdm-gtk-greeter firefox vlc gtkmm3 xf86-video-vmware xf86-input-vmmouse open-vm-tools papirus-icon-theme networkmanager network-manager-applet pulseaudio bash-completion neofetch htop --noconfirm
+pacman -S xorg xfce4 xfce4-goodies xdg-user-dirs gvfs lightdm lightdm-gtk-greeter firefox vlc gtkmm3 xf86-video-vmware xf86-input-vmmouse open-vm-tools papirus-icon-theme networkmanager network-manager-applet pulseaudio bash-completion neofetch --noconfirm
 
 # Atualização do sistema
 pacman -Syu --noconfirm
 
 # Desinstala programas desnecessários
-pacman -R xfburn xfce4-sensors-plugin xfce4-notes-plugin mousepad orage xfce4-taskmanager xfce4-clipman-plugin xfce4-screenshooter xfce4-dict parole --noconfirm
+pacman -R xfburn xfce4-sensors-plugin xfce4-notes-plugin mousepad orage xfce4-clipman-plugin xfce4-screenshooter xfce4-dict parole --noconfirm
 
 # Apaga o cache do pacman
 pacman -Scc --noconfirm
