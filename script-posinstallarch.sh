@@ -44,7 +44,7 @@ echo "${usuario}:${senhausuario}" | chpasswd
 echo "${usuario} ALL=(ALL) ALL" >> /etc/sudoers
 
 # Instalação dos programas - Ambiente Gráfico: xfce | Diplay manager: lightdm | Gerenciar diretórios do usuário: xdg-user-dirs |
-pacman -S xorg xfce4 xfce4-goodies xdg-user-dirs gvfs lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings firefox vlc gtkmm3 xf86-video-vmware xf86-input-vmmouse open-vm-tools papirus-icon-theme networkmanager network-manager-applet pulseaudio bash-completion neofetch --noconfirm
+pacman -S xorg xfce4 xfce4-goodies xdg-user-dirs gvfs lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings firefox vlc gtkmm3 xf86-video-vmware xf86-input-vmmouse open-vm-tools papirus-icon-theme networkmanager network-manager-applet pulseaudio bash-completion neofetch archlinux-wallpaper --noconfirm
 
 # Atualização do sistema
 pacman -Syu --noconfirm
