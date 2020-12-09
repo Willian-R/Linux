@@ -48,13 +48,13 @@ pacman -S xorg xfce4 xfce4-goodies xdg-user-dirs gvfs lightdm lightdm-gtk-greete
 
 # Atualização do sistema
 pacman -Syu --noconfirm
-pacman -Qdtq | pacman -Rs -
 
 # Desinstala programas desnecessários
 pacman -R xfburn xfce4-sensors-plugin xfce4-notes-plugin mousepad orage xfce4-clipman-plugin xfce4-screenshooter xfce4-dict parole --noconfirm
 
 # Apaga o cache do pacman
 pacman -Scc --noconfirm
+pacman -Qdtq | pacman -Rs -
 
 # Ativa vmtools (para o vmware) e o lightdm
 systemctl enable lightdm
