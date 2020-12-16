@@ -50,7 +50,7 @@ pacman -S xorg xfce4 xfce4-goodies xdg-user-dirs gvfs lightdm lightdm-gtk-greete
 pacman -Syu --noconfirm
 
 # Desinstala programas desnecessários
-pacman -R xfburn xfce4-sensors-plugin xfce4-notes-plugin mousepad orage xfce4-clipman-plugin xfce4-screenshooter xfce4-dict parole --noconfirm
+pacman -Rs xfburn xfce4-sensors-plugin xfce4-notes-plugin mousepad orage xfce4-clipman-plugin xfce4-screenshooter xfce4-dict parole --noconfirm
 
 # Apaga o cache do pacman
 pacman -Scc --noconfirm
